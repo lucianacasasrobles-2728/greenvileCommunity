@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Greenvile Community</title>
+
+    <!-- Link to external CSS file (styles for the page) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Main page title -->
+    <h1>Greenvile Sustainable Community</h1>
+
+    <!-- Section showing total number of communal points -->
+    <div class="section">
+        <h2>Communal Points Pool: <span id="communalPool">0</span></h2>
+    </div>
+
+    <!-- Section that will display all green actions (loaded from JSON) -->
+    <div class="section">
+        <h2>Green Actions</h2>
+
+        <!-- Container where JS will insert each action as a card -->
+        <div id="greenActions" class="container"></div>
+    </div>
+
+    <!-- Section that will display the communal goals with progress bars -->
+    <div class="section">
+        <h2>Communal Goals</h2>
+
+        <!-- Container where JS will insert goal cards -->
+        <div id="communalGoals" class="container"></div>
+    </div>
+
+    <!-- Section that will display the available trades -->
+    <div class="section">
+        <h2>Available Trades</h2>
+
+        <!-- Container where JS will insert trade cards -->
+        <div id="trades" class="container"></div>
+    </div>
+
+    <!-- Link to JavaScript file (loads JSON and updates the page) -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

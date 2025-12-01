@@ -1,0 +1,18 @@
+{
+  "greenActions": [
+  ],
+  "communalGoals": [
+    {
+      "title": "Test1",
+      "description": "test1",
+      "pointsNeeded": 0,
+      "currentPoints": 0,
+      "completed": false,
+      "tasks": [
+      ]
+    }
+  ],
+  "trades": [
+  ],
+  "communalPointsPool": 1
+}
