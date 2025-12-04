@@ -1,0 +1,197 @@
+/* -------------------------------------------------------
+   GLOBAL STYLES
+   (Base styling applied to the whole webpage)
+-------------------------------------------------------- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f4;
+    margin: 20px;
+    color: #333;
+}
+
+/* Main page title */
+h1 {
+    color: #2e7d32; /* Green color for titles */
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* -------------------------------------------------------
+   SECTION WRAPPER
+   (Used for main blocks: green actions, trades, goals)
+-------------------------------------------------------- */
+.section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px; /* Rounded card style */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.12); /* Soft shadow */
+}
+
+/* -------------------------------------------------------
+   DEFAULT CONTAINER FOR FLEX SECTIONS
+   (Used for Trades and Goals, NOT Green Actions)
+-------------------------------------------------------- */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to next row */
+    gap: 20px;       /* Spacing between cards */
+}
+
+/* -------------------------------------------------------
+   GRID LAYOUT FOR GREEN ACTIONS
+   (4 columns, responsive, clean layout)
+-------------------------------------------------------- */
+#greenActions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 20px;
+}
+
+/* Responsive behavior: 2 columns on medium screens */
+@media (max-width: 900px) {
+    #greenActions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 1 column on small screens (mobile) */
+@media (max-width: 600px) {
+    #greenActions {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* -------------------------------------------------------
+   CARD STYLE
+   (Used for each item: action, goal, trade)
+-------------------------------------------------------- */
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    padding: 15px;
+    width: 100%; /* Fit layout width (grid or flex) */
+
+    /* PRO: smooth animations */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* PRO hover effect: lift and shadow */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Card title style */
+.card h3 {
+    margin-top: 10px; /* spacing below image */
+    color: #2e7d32;
+}
+
+/* -------------------------------------------------------
+   CARD IMAGE STYLING (PRO)
+   Consistent size + zoom effect on hover
+-------------------------------------------------------- */
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; /* crop image without distortion */
+    border-radius: 8px;
+    margin-bottom: 10px;
+
+    /* PRO: smooth zoom */
+    transition: transform 0.3s ease;
+}
+
+/* PRO: slight zoom on hover */
+.card:hover img {
+    transform: scale(1.04);
+}
+
+/* -------------------------------------------------------
+   BUTTON GROUP
+   (Container to align action buttons cleanly)
+-------------------------------------------------------- */
+.button-group {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+/* -------------------------------------------------------
+   BUTTON STYLE
+-------------------------------------------------------- */
+.action-btn {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+
+    transition: background-color 0.2s ease;
+}
+
+/* Hover effect for buttons */
+.action-btn:hover {
+    background-color: #1b5e20;
+}
+
+/* -------------------------------------------------------
+   COMMUNAL GOALS ALIGNMENT
+   (Center items for a more balanced layout)
+-------------------------------------------------------- */
+#communalGoals {
+    text-align: center;
+}
+
+#communalGoals .card {
+    margin: 0 auto; /* Center card horizontally */
+    width: 280px;   /* Fixed width so it doesn’t stretch */
+}
+
+/* -------------------------------------------------------
+   PROGRESS BAR STYLE
+   (Used inside communal goals)
+-------------------------------------------------------- */
+progress {
+    width: 100%; /* Full width */ 
+    height: 20px;
+}
+
+/* -------------------------------------------------------
+   TRADES GRID LAYOUT
+   (2 columns, responsive)
+-------------------------------------------------------- */
+#trades {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Cards fill space nicely */
+#trades .card {
+    width: 100%;
+}
+
+/* Responsive: 1 column on small screens */
+@media (max-width: 800px) {
+    #trades {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* -------------------------------------------------------
+   TRADES IMAGE OVERRIDE
+   (Better visual balance)
+-------------------------------------------------------- */
+#trades .card img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}

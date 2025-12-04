@@ -1,0 +1,19 @@
+POINT_SETTINGS
+Monthly
+2025-12-01
+1
+END_POINT_SETTINGS
+RESIDENTS
+1|Test1|test1|test1|test1||0
+END_RESIDENTS
+GREEN_ACTIONS
+1|test1||test1|0|false|
+2|green|greeb|C:\Users\Roman\Desktop\Memes and stuff\important\200590392_936530290530659_888062903098272985_n.jpg|2|false|
+END_GREEN_ACTIONS
+COMMUNAL_GOALS
+GOAL|1|Test1|test1|0|0|false
+TASK|1|test1|test1|0|true|false
+END_COMMUNAL_GOALS
+TRADES
+1|Test1|test1||1|1|true|true
+END_TRADES
