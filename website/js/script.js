@@ -35,15 +35,18 @@ function displayData(data) {
         div.classList.add('card'); // 💚 Apply card style
 
         div.innerHTML = `
-            <h3>${action.title}</h3>
-            <p>${action.description}</p>
-        `;
+    ${action.picture ? `<img src="${action.picture}" alt="${action.title}">` : ``}
+    <h3>${action.title}</h3>
+    <p>${action.description}</p>
 
-        if (action.picture) {
-            div.innerHTML += `<img src="${action.picture}" width="200">`;
-        }
+    <div class="button-group">
+        <button class="action-btn">Allocate</button>
+        <button class="action-btn">Trade</button>
+        <button class="action-btn">Donate</button>
+    </div>
+`;
 
-        greenActionsDiv.appendChild(div);
+    greenActionsDiv.appendChild(div);
     }
 
 
@@ -106,14 +109,11 @@ function displayData(data) {
         div.classList.add('card'); // 💚 Apply card style
 
         div.innerHTML = `
-            <h3>${trade.title}</h3>
-            <p>${trade.description}</p>
-            <p><strong>Cost:</strong> ${trade.pointsCost} points</p>
-        `;
-
-        if (trade.picture) {
-            div.innerHTML += `<img src="${trade.picture}" width="200">`;
-        }
+    ${trade.picture ? `<img src="${trade.picture}" alt="${trade.title}">` : ``}
+    <h3>${trade.title}</h3>
+    <p>${trade.description}</p>
+    <p><strong>Cost:</strong> ${trade.pointsCost} points</p>
+`;
 
         tradesDiv.appendChild(div);
     }

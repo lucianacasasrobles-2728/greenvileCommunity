@@ -3,7 +3,7 @@
 <head>
     <title>Greenvile Community</title>
 
-    <!-- Link to external CSS file (styles for the page) -->
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -12,37 +12,30 @@
     <!-- Main page title -->
     <h1>Greenvile Sustainable Community</h1>
 
-    <!-- Section showing total number of communal points -->
+    <!-- Communal Points -->
     <div class="section">
         <h2>Communal Points Pool: <span id="communalPool">0</span></h2>
     </div>
 
-    <!-- Section that will display all green actions (loaded from JSON) -->
+    <!-- Green Actions -->
     <div class="section">
         <h2>Green Actions</h2>
-
-        <!-- Container where JS will insert each action as a card -->
-        <div id="greenActions" class="container"></div>
+        <div id="greenActions"></div> <!-- No container class here -->
     </div>
 
-    <!-- Section that will display the communal goals with progress bars -->
+    <!-- Communal Goals -->
     <div class="section">
         <h2>Communal Goals</h2>
-
-        <!-- Container where JS will insert goal cards -->
-        <div id="communalGoals" class="container"></div>
+        <div id="communalGoals"></div> <!-- No container class -->
     </div>
 
-    <!-- Section that will display the available trades -->
+    <!-- Trades -->
     <div class="section">
         <h2>Available Trades</h2>
-
-        <!-- Container where JS will insert trade cards -->
-        <div id="trades" class="container"></div>
+        <div id="trades"></div> <!-- No container class -->
     </div>
 
-    <!-- Link to JavaScript file (loads JSON and updates the page) -->
+    <!-- Scripts -->
     <script src="js/script.js"></script>
-
 </body>
 </html>
